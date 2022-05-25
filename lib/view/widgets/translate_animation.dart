@@ -1,0 +1,1 @@
+//bu pagega tilni sozlashni qo'shaman
