@@ -17,7 +17,7 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-  Widget appBarTitle = Text("Title");
+  Widget appBarTitle = Text("Visit uz");
   Icon actionIcon = Icon(Icons.search);
 
   Future<void> _refresh() {
