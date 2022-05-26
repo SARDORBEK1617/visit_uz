@@ -44,11 +44,7 @@ class _FaqPageState extends State<FaqPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-
+      body: ListView(padding: EdgeInsets.zero, children: [
         buildTop(),
         buildSocialButtons(),
       ]),
@@ -63,7 +59,7 @@ class _FaqPageState extends State<FaqPage> {
       alignment: Alignment.center,
       children: [
         IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back),
@@ -79,6 +75,49 @@ class _FaqPageState extends State<FaqPage> {
       ],
     );
   }
+
+  Widget buildCoverImage() => Container(
+        color: Colors.grey,
+        child: Image.network(
+          'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/1_9hUbiy9uSWAFztyw5nMYXQ.png?alt=media&token=a02db955-cfec-49f0-9ac8-02bb6a606507',
+          width: double.infinity,
+          height: coverHeight,
+          fit: BoxFit.cover,
+        ),
+      );
+
+  Widget buildProfileImage() => Container(
+    decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.blueGrey.withOpacity(0.6),
+            spreadRadius: 10,
+            blurRadius: 100,
+            offset: Offset(0, 4),
+          ),
+        ],
+        borderRadius: (BorderRadius.circular(20))),
+    child: CircleAvatar(
+          backgroundImage: NetworkImage(
+            'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/photo_2022-05-25_18-57-07.jpg?alt=media&token=fafe3a14-daa2-4936-b91d-536302faaddf',
+          ),
+
+          radius: profileHeight / 2,
+          backgroundColor: Colors.grey.shade800,
+          // child: Container(
+          //   decoration: BoxDecoration(borderRadius: (BorderRadius.circular(20))),
+          //   child:
+          //
+          //   Image.network(
+          //     'https://firebasestorage.googleapis.com/v0/ b/visit-uz.appspot.com/o/'
+          //         'photo_2022-05-25_18-57-07.jpg?alt=media&token=fafe3a14-daa2-4936-b91d-536302faaddf',
+          //     fit: BoxFit.cover,
+          //     width: double.infinity,
+          //     height: coverHeight,
+          //   ),
+          // ),
+        ),
+  );
 
   Widget buildSocialButtons() => Column(
         children: [
@@ -142,30 +181,6 @@ class _FaqPageState extends State<FaqPage> {
           ),
           buildAbout(),
         ],
-      );
-
-  Widget buildCoverImage() => Container(
-        color: Colors.grey,
-        child: Image.network(
-          'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/1_9hUbiy9uSWAFztyw5nMYXQ.png?alt=media&token=a02db955-cfec-49f0-9ac8-02bb6a606507',
-          width: double.infinity,
-          height: coverHeight,
-          fit: BoxFit.cover,
-        ),
-      );
-
-  Widget buildProfileImage() => CircleAvatar(
-        radius: profileHeight / 2,
-        backgroundColor: Colors.grey.shade800,
-        child: Container(
-          decoration: BoxDecoration(borderRadius: (BorderRadius.circular(20))),
-          child: Image.network(
-            'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/photo_2022-05-25_18-57-07.jpg?alt=media&token=fafe3a14-daa2-4936-b91d-536302faaddf',
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: coverHeight,
-          ),
-        ),
       );
 
   Widget buildSocialButton(

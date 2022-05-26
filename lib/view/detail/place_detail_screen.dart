@@ -107,20 +107,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on,
-                                color: Colors.black26,
-                              ),
-                              Flexible(
-                                  child: Text(
-                                widget.place.locationDesc,
-                                style: context.bodyText1
-                                    .copyWith(color: Colors.blue),
-                              ))
-                            ],
-                          ),
+
                           SizedBox(
                             height: 10,
                           ),
@@ -128,22 +115,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                           SizedBox(
                             height: 10,
                           ),
-                          Text(widget.place.description),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(widget.place.description),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(widget.place.description),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            "PLACES IN THIS COLLECTION",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
+
                         ],
                       ),
                     ),

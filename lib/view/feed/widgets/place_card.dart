@@ -35,29 +35,29 @@ class PlaceCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(place.user.urlPhoto),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      place.user.name,
-                      style: context.bodyText1.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      'kecha  9:10 p.m. da',
-                      style: context.bodyText1.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+                // CircleAvatar(
+                //   backgroundImage: NetworkImage(place.user.urlPhoto),
+                // ),
+                // const SizedBox(
+                //   width: 10,
+                // ),
+                // Column(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   children: [
+                //     Text(
+                //       place.user.name,
+                //       style: context.bodyText1.copyWith(
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //     Text(
+                //       'kecha  9:10 p.m. da',
+                //       style: context.bodyText1.copyWith(
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 const Spacer(),
                 IconButton(
                   onPressed: () {},

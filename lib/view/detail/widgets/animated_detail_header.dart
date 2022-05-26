@@ -252,36 +252,51 @@ class _UserInfoContainer extends StatelessWidget {
           top: Radius.circular(30),
         ),
       ),
-      child: Row(
+      child:  Row(
         children: [
-          CircleAvatar(
-            backgroundImage: NetworkImage(place.user.urlPhoto),
+          Icon(
+            Icons.location_on,
+            color: Colors.black26,
           ),
-          const SizedBox(
-            width: 10,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(place.user.name, style: context.bodyText1),
-              Text('yesterday at 9:10 p.m.',
-                  style: context.bodyText1.copyWith(color: Colors.grey)),
-            ],
-          ),
-          const Spacer(),
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              primary: Colors.blue.shade600,
-              textStyle: context.subtitle1,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            child: const Text('+Follow'),
-          ),
+          Flexible(
+              child: Text(
+                place.locationDesc,
+                style: context.bodyText1
+                    .copyWith(color: Colors.blue),
+              ))
         ],
       ),
+
+      // Row(
+      //   children: [
+      //     CircleAvatar(
+      //       backgroundImage: NetworkImage(place.user.urlPhoto),
+      //     ),
+      //     const SizedBox(
+      //       width: 10,
+      //     ),
+      //     Column(
+      //       crossAxisAlignment: CrossAxisAlignment.start,
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         Text(place.user.name, style: context.bodyText1),
+      //         Text('yesterday at 9:10 p.m.',
+      //             style: context.bodyText1.copyWith(color: Colors.grey)),
+      //       ],
+      //     ),
+      //     const Spacer(),
+      //     TextButton(
+      //       onPressed: () {},
+      //       style: TextButton.styleFrom(
+      //         primary: Colors.blue.shade600,
+      //         textStyle: context.subtitle1,
+      //         shape: RoundedRectangleBorder(
+      //             borderRadius: BorderRadius.circular(15)),
+      //       ),
+      //       child: const Text('+Follow'),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
