@@ -77,7 +77,7 @@ class PlaceCard extends StatelessWidget {
               height: 10,
             ),
             GradientStatusTag(statusTag: statusTag),
-            Spacer(),
+            const Spacer(),
             Row(
               children: [
                 TextButton.icon(
