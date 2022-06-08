@@ -58,12 +58,6 @@ class _FaqPageState extends State<FaqPage> {
       clipBehavior: Clip.none,
       alignment: Alignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
         Container(
           margin: EdgeInsets.only(bottom: bottom),
           child: buildCoverImage(),
@@ -76,28 +70,65 @@ class _FaqPageState extends State<FaqPage> {
     );
   }
 
-  Widget buildCoverImage() => Container(
-        color: Colors.grey,
-        child: Image.network(
-          'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/1_9hUbiy9uSWAFztyw5nMYXQ.png?alt=media&token=a02db955-cfec-49f0-9ac8-02bb6a606507',
-          width: double.infinity,
-          height: coverHeight,
-          fit: BoxFit.cover,
-        ),
+  Widget buildCoverImage() => Stack(
+        children: [
+          Image.network(
+            'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/1_9hUbiy9uSWAFztyw5nMYXQ.png?alt=media&token=a02db955-cfec-49f0-9ac8-02bb6a606507',
+            width: double.infinity,
+            height: coverHeight,
+            fit: BoxFit.cover,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 26, left: 300),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ],
       );
 
   Widget buildProfileImage() => Container(
-    decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.blueGrey.withOpacity(0.6),
-            spreadRadius: 10,
-            blurRadius: 100,
-            offset: Offset(0, 4),
-          ),
-        ],
-        borderRadius: (BorderRadius.circular(20))),
-    child: CircleAvatar(
+        decoration: BoxDecoration(
+          color: Colors.grey.shade300,
+          shape: BoxShape.circle,
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.blueGrey,
+              spreadRadius: 1.0,
+              blurRadius: 15.0,
+              offset: Offset(2.0, 2.0),
+            ),
+            BoxShadow(
+              color: Colors.white,
+              spreadRadius: 1.0,
+              blurRadius: 15.0,
+              offset: Offset(-2.0, -2.0),
+            ),
+          ],
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.grey.shade200,
+                Colors.grey.shade300,
+                Colors.grey.shade400,
+                Colors.grey.shade500,
+              ],
+              stops: [
+                0.1,
+                0.3,
+                0.8,
+                0.9,
+              ]),
+          // borderRadius: (BorderRadius.circular(20)),
+        ),
+        child: CircleAvatar(
           backgroundImage: NetworkImage(
             'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/photo_2022-05-25_18-57-07.jpg?alt=media&token=fafe3a14-daa2-4936-b91d-536302faaddf',
           ),
@@ -117,7 +148,7 @@ class _FaqPageState extends State<FaqPage> {
           //   ),
           // ),
         ),
-  );
+      );
 
   Widget buildSocialButtons() => Column(
         children: [

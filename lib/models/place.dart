@@ -9,6 +9,7 @@ class TravelPlace {
     this.statusTag = StatusTag.popular,
     this.shared = 0,
     this.likes = 0,
+
   });
 
   final String id;
@@ -28,8 +29,7 @@ class TravelPlace {
       likes: 500,
       shared: 240,
       description:
-          'Toshkent — Oʻzbekistonning poytaxti va eng yirik shahardir, shuningdek, '
-          'aholisi boʻyicha Markaziy Osiyodagi eng yirik qadimiy shaharlardan biridir. ',
+          '  Toshkent — Oʻzbekistonning poytaxti va eng yirik shahardir, shuningdek,aholisi boʻyicha Markaziy Osiyodagi eng yirik qadimiy shaharlardan biridir.Bu shahar Oʻzbekistonning shimoli-sharqiy qismida, Qozogʻiston bilanchegaraga yaqin qismda joylashgan boʻlib, maydoni 334,8 km2 (129.3 2)ni tashkil etadi. 2021-yilgi maʼlumotlarga koʻra, Toshkent aholisi 2 694 400 nafarni yoki Oʻzbekiston aholisining qariyb 8% ni tashkil etadi. 2018-yilga koʻra, Toshkent shahrining YIM \$2,74 milliardni tashkil etadi va bu koʻrsatkich Oʻzbekistondagi eng katta YIMga ega shahar boʻlib kelmoqda .\nHozirgi kunda, mustaqil Oʻzbekiston poytaxti sifatida, Toshkentda koʻp millatli aholi bor, ular orasida etnik oʻzbeklar va qozoqlar koʻpchilikni tashkil qiladi. 2009-yilda Toshkentning 2200 yilligi nishonlandi. Bu munosabat bilan shahar infra va transport tizimi yangilandi.',
       imagesUrl: [
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Tashkent1.jpg?alt=media&token=f94da53d-68c1-449b-86e3-e40f681ed547',
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Tashkent.jpg?alt=media&token=efe2ea0b-789b-4c85-836a-89558d323155',
@@ -46,8 +46,23 @@ class TravelPlace {
       likes: 140,
       shared: 49,
       description:
-          'Samarqand dunyo taraqqiyotining eng qadimgi va markaziy shaharlaridan '
-          'biri boʻlib, jahon madaniyati va fani xazinasiga katta hissa qoʻshgan shahardir.',
+          '  Samarqand dunyo taraqqiyotining eng qadimgi va markaziy shaharlaridan '
+          'biri boʻlib, jahon madaniyati va fani xazinasiga katta hissa qoʻshgan shahardir.'
+          'Samarqand — Oʻzbekiston Respublikasi Samarqand viloyatidagi qadimiy '
+          'shahar. Viloyatning maʼmuriy, iqtisodiy va madaniy markazi '
+          '(1938-yildan). 1925—30 yillarda Respublika poytaxti.'
+          ' Oʻzbekistonning janubi-gʻarbida, Zarafshon vodiysining markaziy '
+          'qismida (Dargʻom va Siyob kanallari orasida) joylashgan. Oʻrtacha '
+          '695 m balandlikda. Toshkentdan 300 km. Samarqanddan Toshkent—Dushanbe,'
+          " Toshkent—Turkmanboshi, Toshkent—Uchquduq—Qo'ng'irot temir yoʻllari,"
+          "Katta Oʻzbek trakti (Toshkent—Termiz yo'li) oʻtadi. Shahar aholisi va "
+          "xoʻjaliklari Shovdor, Bogʻishamol ariqlaridan suv oladi. "
+          "Iyulning oʻrtacha harorati 25,9°, eng baland harorat 40—42°, "
+          "yanvar oʻrtacha harorati 0,2°, eng past harorat —26°. Maydoni "
+          "120 km². Aholisi 519600 ming kishi (2016); 1975-yil 299000,"
+          " 1970-yil 267000, 1959-yil 196000, 1939-yil 136000, 1897-yil "
+          "55000, 1865-yil 26000.Samarqand shahar Kengashiga qarashli 4 "
+          "shaharcha (Ingichka, Kimyogarlar, Farhod, Hishrov) mavjud.",
       imagesUrl: [
         'https://avatars.mds.yandex.net/get-zen_doc/3385297/pub_5ebaeedacbfa886ba5804d88_5ec7eebc69e19b673df07ab2/scale_1200',
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/samarkand-vid-1_KD1RLXq.jpg?alt=media&token=8c58832c-33a3-4a77-a3a3-58bd352d4d6a',
@@ -63,9 +78,27 @@ class TravelPlace {
       shared: 40,
       name: 'Buxoro',
       description:
-          'Buxoro — oʻrta asrning 140 dan ortiq arxitektura yodgorliklarini oʻzida'
+          '  Buxoro — oʻrta asrning 140 dan ortiq arxitektura yodgorliklarini oʻzida'
           ' saqlagan „muzey shahardir“. Koʻp asrlar avval qurilgan Poi Kalon, '
-          'Qoʻsh Madrasa, Somoniylar maqbarasi, minorai kalon kabi ansambllar bugungi kungada ham barchaning diqqatida.',
+          'Qoʻsh Madrasa, Somoniylar maqbarasi, minorai kalon kabi ansambllar '
+          'bugungi kungada ham barchaning diqqatida.'
+          'Buxoro shahri qadim zamonlarda qanday nomlangani — nomaʼlum. '
+          'Milodiy V asrga oid xitoy manbalarida Buxoro shahri Nyumi tarzida tilga'
+          ' olinib oʻtilgan. Binobarin, shaharda shu nomdagi mulk hukmdorining qarorgohi '
+          'ham boʻlgan. Tan imperiyasining VII asrga oid solnomalarida Buxoro shahri An '
+          '(Ango), Ansi, Buxo (Buxe, Fuxo) shakllarida qayd etib oʻtilgan. Keyinchalik '
+          'shahar har xil nomlana boshladi. Arab qadimiy manbalarda u Bumiskat, Madinat '
+          'us-sufriya (Mis shahar), Numijkat (soʻgʻdcha numij yoki namich degani mashhur '
+          'degan maʼnoni anglatgan) tarzida keltirilgan. Qadimiy zamonlarda yashagan '
+          'mahalliy mualliflarning fikricha, shaharning nomi Buxor, yaʼni „Sanamlar'
+          ' turgan ibodatxona“ maʼnosini anglatuvchi bir soʻzdan kelib chiqqan.'
+          ' Ayrim tadqiqotchilarning faraz qilishlaricha, Buxoro nomi mintaqaning eng '
+          "asosiy buddaviylik ibodatxonasi vixara yoki ana shu vixaraning sug'diy "
+          'transkripsiyasi boʻlmish buxoro (ibodatxona) soʻzidan kelib chiqqan.'
+          ' Ammo buddaviylik va moniylik diniy taʼlimotlariga oid osori atiqalar'
+          ' shahar hududida ham, umuman, Buxoro vohasida ham topilgan emas.'
+          ' Buxoro (Buxara) toponimi ilk bor Soʻgʻd yozuvlari bilan Buxoroda zarb '
+          'qilingan mis tangalarida tilga olingan (milodiy IV-V asrlar).',
       imagesUrl: [
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/f8cd1786da6d94818dd8a.jpg?alt=media&token=29500b72-d29c-4736-b478-5d727be6f257',
         'http://photocdn.photogoroda.com/source2/cn9787/r9796/c9798/4123497.jpg?v=20171213112136',
@@ -82,9 +115,17 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          'Oʻzbekiston Respublikasining Surxondaryo viloyatidagi shahar. Viloyat markazi '
+          '  Oʻzbekiston Respublikasining Surxondaryo viloyatidagi shahar. Viloyat markazi '
           'Amudaryoning oʻng sohilida, Oʻzbekistonning janub qismida, Afgʻoniston '
-          'chegarasiga yaqin, oʻrtacha 310 m balandlikda joylashgan. Xalqaro daryo porti.',
+          'chegarasiga yaqin, oʻrtacha 310 m balandlikda joylashgan. Xalqaro daryo porti.'
+          'Temir yoʻl stansiyasi. Toshkentdan 708 km. Maydoni 27,8 km².'
+          ' Aholisi 119,6 ming kishi (2004). Iqlimi kontinental, issiq va'
+          ' quruq, yozi jazirama issiq (Oʻzbekistondagi eng issiq shahar –'
+          ' eng yuqori temperatura 50-60c°, hozirgi kunda), qishi iliq va'
+          ' qisqa. Yillik oʻrtacha temperatura 16–18°. Yanvarning oʻrtacha'
+          ' temperaturasi 2,8–3,6, iyulniki 28–32°. Baʼzida, qishda sovuq – '
+          '20° va undan ham past boʻladi. Yillik yogʻin 133 mm. Termiz '
+          'shahri logistika uchun strategik nuqta hisoblanadi.',
       imagesUrl: [
         "http://3.bp.blogspot.com/-ehx74ZoCBU0/VT0rBJLaESI/AAAAAAABsm8/n8cPNWBU_xo/s1600/DSC_5856.JPG",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/photo_2022-05-13_21-46-30.jpg?alt=media&token=ebf44c40-c622-485a-8cd7-fcead982e2a8',
@@ -101,10 +142,16 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          'Xiva – Oʻzbekiston Respublikasining Xorazm viloyatidagi shahar. '
+          '  Xiva – Oʻzbekiston Respublikasining Xorazm viloyatidagi shahar. '
           'Xiva shahri markazi. Oʻzbekistonning shimoliy gʻarbida, Xorazm '
           'viloyatning janubida, Amudaryoning chap sohilida, daryodan 40 km '
-          'janubida, 95 m balandlikda joylashgan. ',
+          'janubida, 95 m balandlikda joylashgan.  Shahar yonidan Polvonyop '
+          '(qadimiy Xeykaniq) kanali oʻtgan. Yaqin temir yoʻl stansiyasi'
+          ' – Urganch (30 km). Maydoni 0,08 ming km². 2022-yil 1-yanvar '
+          'holatiga Xiva tuman doimiy aholisining soni 149 698 kishi, Xiva '
+          'shahri – 95 246 kishini tashkil qilgan. Shaharning qadimgi'
+          ' qismidagi juda koʻp arxitektura yodgorliklariga boy boʻlgan Ichan-Qal’a Sharqning'
+          ' ekzotik shahar timsolini oʻzida saqlab qolgan afsonaviy shahardir.',
       imagesUrl: [
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Khorazm.jpg?alt=media&token=98aa141f-14bf-4a88-a50b-d8401c1e3325',
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Xiva.jpg?alt=media&token=54cadc24-eac0-4a6c-bd5a-056e8c525c3b',
@@ -122,10 +169,22 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          'Navoiy Oʻzbekistonning Navoiy viloyatidagi shahardir. Bu shahar '
+          '  Navoiy Oʻzbekistonning Navoiy viloyatidagi shahardir. Bu shahar '
           'Navoiy viloyatning maʼmuriy, iqtisodiy va madaniy markazidir.'
           ' Oʻzbekistonning janubi-gʻarbida, '
-          'Zarafshon daryosi vodiysida, viloyatning sharqiy chekkasida, 347 m balandlikda joylashgan.',
+          'Zarafshon daryosi vodiysida, viloyatning sharqiy chekkasida, 347 m'
+          ' balandlikda joylashgan.Navoiy shahri Alisher Navoiy sharafiga '
+          'atab shunday nomlangan. Shimolda qadimiy Karmana shahri joylashgan boʻlib, '
+          'oʻtmishda Buxoro amirligining bekligi hisoblangan. Janubda'
+          ' Temir yoʻl stansiyasi va bir qishloq boʻlgan, hozirda bu '
+          'joy Navoiy shahrining Vokzaloldi hududi deb ataladi.'
+          ' 1958-yilning sentabr oyida Navoiy shahri sanoatlashgan shahar '
+          'sifatida tashkil topdi. Shu vaqtdan Navoiy viloyati tashkil '
+          'topganga qadar Navoiy shahri Buxoro viloyati tarkibida boʻlib keldi.'
+          'Zarafshon daryosining yaqinligi, yirik qishloq xoʻjaligi hududning'
+          ' markazida joylashganligi, transport bilan yaxshi taʼminlanganligi'
+          ' shaharning tez oʻsish omili boʻldi. Navoiy Oʻrta Osiyoda yirik '
+          'elektr energiya va kimyo sanoati markazi hisoblanadi.',
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Navoiy.jfif?alt=media&token=8880ee53-1fc3-4ab7-9e04-ef1c705b7c4a",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/1384_2021_02_09_1.jpg?alt=media&token=3df0fcee-28ea-4c75-b2d9-8bc2c4190661',
@@ -142,10 +201,19 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          "Farg'ona o'zining go'zal landshaftlari bilan mashhur bo'lgan olis shahar."
+          "  Farg'ona o'zining go'zal landshaftlari bilan mashhur bo'lgan olis shahar."
           "'Chimyon' kurorti Olay tog 'etaklaridagi shifobaxsh mineral"
           " buloqlarning muvozanati bilan mashhur bo'lgan Chimen qishlog'iga"
-          " asoslangan. Eng katta kurort Markaziy Osiyoda joylashgan.",
+          " asoslangan. Eng katta kurort Markaziy Osiyoda joylashgan."
+          "Fargʻona viloyatining maʼmuriy, iktisodiy va madaniy markazi, "
+          "respublikaning yirik shaharlaridan biri. Maydoni 0,09 ming km²."
+          " Aholisi 222,4 ming kishi (2004, Fargʻona vodiysidagi shaharlar "
+          "ichida aholi soni boʻyicha 3-oʻrinda). Shahar Fargʻona vodiysining "
+          "jan. qismida, Olay togʻlarining etagida, 580 m balandlikda joylashgan."
+          "\n Fargʻona eng yashil shahar Markaziy Osiyoda darahtlar oʻstirish "
+          "boʻyicha,yaʼni chinorlarni.Chinorlar Fargʻonaning ramzi hisoblannadi"
+          "Fargʻona eng koʻp ishlab chiqaruvchi shahar Toshkent dan soʻng"
+          "Adabiy tilning asosi Fargʻona shevasi hisoblanadi.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/norbutabiy-madrasah-facade-norbut-biy-huge-portal-decorated-arabesques-two-domes-covered-glazed-tiles-69422421.jpg?alt=media&token=f4bcbfbd-ab26-4e92-a809-c29cd983e71f",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/fargoniy.jfif?alt=media&token=1552d072-d5a8-41a9-a5e0-4b62a3b72614',
@@ -161,11 +229,17 @@ class TravelPlace {
       name: 'Andijon',
       shared: 500,
       likes: 39,
-      description: "Andijon Oʻzbekistonning Andijon viloyatidagi shahardir."
+      description: "  Andijon Oʻzbekistonning Andijon viloyatidagi shahardir."
           " Viloyatning maʼmuriy, iqtisodiy va madaniy markazi."
           " Oʻzbekistonning yirik industrial shaharlaridan biri."
           " Shahar Fargʻona vodiysining sharqida. "
-          "Andijonsoy yoqasida, dengiz sathidan 450 m balandlikda joylashgan.",
+          "Andijonsoy yoqasida, dengiz sathidan 450 m balandlikda joylashgan."
+          "\nShaharda 48 zamonaviy yirik sanoat korxonalari, 63 qurilish tashkilotlari"
+          "va mahalliy sanoat korxonalari ishlab turibdi. „Andijonmash“, "
+          "„Andijonirmash“ kabi aksiyadorlik jamiyatlari paxta zavodlari "
+          "uchun uskunalar, qishloq xoʻjaligi mashinalariga ehtiyoj qismlar, "
+          "nasoslar, universal yuklagichlar, aylanma pluglar, nogironlar uchun "
+          "aravachalar va boshqa anjomlarni ishlab chiqaradi.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/andijon3.jpg?alt=media&token=bd0ddc46-3997-430b-ae07-665050ded7c2",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Andijon5.jpg?alt=media&token=d743b2af-cd41-4504-bfec-351ca2e024d1',
@@ -183,12 +257,17 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          "Namangan — Namangan viloyatidagi shahar. Viloyatning maʼmuriy,"
+          "  Namangan — Namangan viloyatidagi shahar. Viloyatning maʼmuriy,"
           " iqtisodiy va madaniy markazi Aholi soni boʻyicha Fargʻonadan "
           "oldingi oʻrinda. Oʻzbekistonning yirik shaharlaridan biri. "
           "Fargʻona vodiysining har jihatdan peshqadam viloyati. Vodiyning "
           "shim.da, Shim. Fargʻona kanali bilan Namangansoy "
-          "kesishgan yerda, 450 m balandlikda joylashgan. Maydoni 83,3 ming km².",
+          "kesishgan yerda, 450 m balandlikda joylashgan. Maydoni 83,3 ming km²."
+          "\nFargʻona vodiysining qad. poytaxti Axsikat (Axsikent) "
+          "1620-yildagi qattiq zilzila natijasida vayron boʻlganligi"
+          " sababli, uning aholisi hozirgi Namangan shahri hududiga koʻchib "
+          'oʻtgan. Namangan tuz koni ("Namak kon") yaqinida vujudga kelgan boʻlib, '
+          "shahar nomi oʻrta asrlarga oid tarixiy xujjatlarda birinchi marta tilga olinadi.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/namangan.jpg?alt=media&token=904920a7-8809-42bf-99b5-907a8c3df67e",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/namangan1.jpg?alt=media&token=625626b9-7de0-4d85-aa96-52b092dd850b',
@@ -206,11 +285,15 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          "Qashqadaryo vohasining markazida, Qashqadaryo boʻyida, xalqaro temir"
+          "  Qashqadaryo vohasining markazida, Qashqadaryo boʻyida, xalqaro temir"
           " yoʻl va avtomobil yoʻllari kesishgan joyda. Maydoni 7,5 ming "
           "gektar. Qarshi Oʻzbekistonning qadimiy shaharlaridan biri. "
           "U turli davrlarda Bolo, Nashebolo, Naxshap, Nasaf, "
-          "nomlari bilan yuritilib, XIV asrdan Qarshi deb atala boshlagan.",
+          "nomlari bilan yuritilib, XIV asrdan Qarshi deb atala boshlagan."
+          "\nQarshi shahrining oʻzbek tarixida oʻziga xos oʻrni bor. "
+          "Qarshi shahri iqtisodiyoti xizmat koʻrsatish sektoriga asoslangan."
+          " Aholining katta qismi savdo, bank, ta'lim, sogʻliqni saqlash"
+          " kabi xizmat koʻrsatishga asoslangan iqtisodiyot tarmoqlarida faoliyat yuritadi.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/qarshi.jpg?alt=media&token=0167679d-5639-4337-ae62-ba71c22246f0",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/qarshi3.jpg?alt=media&token=b74eca49-ad0d-4e44-b15e-385a6f0fd31f',
@@ -229,8 +312,11 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          "Sirdaryo viloyati - Oʻzbekiston Respublikasi tarkibidagi viloyat."
-          " 1963-yil 16 fevralda tashkil etilgan. Shimolidan Qozogʻiston "
+          "  Sirdaryo viloyatidagi shaxar - Oʻzbekiston Respublikasi tarkibidagi viloyat."
+          " 1963-yil 16 fevralda tashkil etilgan.Sirdaryo viloyatidagi shahar,"
+          " viloyatning maʼmuriy, iqtisodiy va madaniy markazi. Mirzachoʻlning"
+          ' jan.-sharqida, 276 m balandlikda, "Doʻstlik" kanali sohilida. '
+          "Toshkentdan 118 km. G.dan Toshkent—Xovos temir yoʻl oʻtgan. Shimolidan Qozogʻiston "
           "Respublikasi, sharqdan Toshkent viloyati, janubidan Tojikiston Respublikasi "
           "va gʻarbdan Jizzax viloyati bilan chegaradosh. Maydoni 4.28 ming km.",
       imagesUrl: [
@@ -249,10 +335,13 @@ class TravelPlace {
       shared: 500,
       likes: 39,
       description:
-          "Jizzax viloyati — Oʻzbekiston Respublikasi tarkibidagi viloyat. "
+          "  Jizzax viloyati — Oʻzbekiston Respublikasi tarkibidagi viloyat. "
           "Respublikaning markaziy qismida. Shim.-sharqda Qozogʻiston Respublikasi va Sirdaryo "
           "viloyati, janubi-gʻarbda Samarqand, Navoiy viloyatlari, janubisharqda "
-          "Tojikiston Respublikasi bilan chegaradosh. Maydon 21,2 ming km2.",
+          "Tojikiston Respublikasi bilan chegaradosh. Maydon 21,2 ming km2."
+              "Jizzax Oʻrta Osiyodan oʻtgan bir necha qadimiy karvon yoʻlining "
+              "tutashgan joyida vujudga kelgan. Asosan oʻzbeklar, rus, tatar,"
+              " ukrain, eroniy va boshqalar ham yashaydi.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Jizzax0.jpg?alt=media&token=5d7ab623-ddf5-4888-b0ef-cab46db5c86f",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/Jizzax1.jpg?alt=media&token=01b3ac84-200a-4a54-b77d-de3562b3dc31',
@@ -269,12 +358,14 @@ class TravelPlace {
       name: 'Nukus',
       shared: 500,
       likes: 39,
-      description: "Qoraqalpogʻiston — Oʻzbekiston Respublikasi"
+      description: "  Qoraqalpogʻiston — Oʻzbekiston Respublikasi"
           " tarkibidagi Suveren demokratik Respublika. 1924-yil 14-oktabrda "
           "bolsheviklar tomonidan Turkiston ASSR tarkibida Muxtor viloyat "
           "sifatida tashkil etilgan. Maydoni 166,6 ming km². Respublika"
           " poytaxti – Nukus shahri. Tarkibida 16 "
-          "tuman, 12 shahar, 14 shaharcha va 124 fuqarolar yigʻini bor.",
+          "tuman, 12 shahar, 14 shaharcha va 124 fuqarolar yigʻini bor."
+          "Nukus — Qoraqalpogʻistonning ilm-fan va madaniyat markazi. "
+          "\nOʻzbekistonning yosh va ko'rkam shaharlaridan biri.",
       imagesUrl: [
         "https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/qoraqalpoq.jpeg?alt=media&token=27e1e926-08cc-48e7-a9aa-3e3e0e0a9e90",
         'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/qoraqalpoq1.jpeg?alt=media&token=96ec7645-4239-438e-8c57-443078ad2045',
@@ -313,24 +404,27 @@ class TravelPlace {
       ],
       user: TravelUser.mario,
     ),
-    // TravelPlace(
-    //   name: 'Teotihuacan',
-    //   imagesUrl: [
-    //   ],
-    //   user: TravelUser.mario,
-    // ),
-    // TravelPlace(
-    //   name: 'Taxco',
-    //   imagesUrl: [
-    //   ],
-    //   user: TravelUser.mario,
-    // ),
-    // TravelPlace(
-    //   name: 'Acapulco',
-    //   imagesUrl: [
-    //   ],
-    //   user: TravelUser.luna,
-    // ),
+    TravelPlace(
+      name: 'Teotihuacan',
+      imagesUrl: [
+        'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/t1.jpg?alt=media&token=e81d1a07-d7d8-4fe4-9cf8-bc874f61d5f6',
+      ],
+      user: TravelUser.mario,
+    ),
+    TravelPlace(
+      name: 'Taxco',
+      imagesUrl: [
+        'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/t3.jpg?alt=media&token=2a50e993-8893-4463-a303-636323f308f9'
+      ],
+      user: TravelUser.mario,
+    ),
+    TravelPlace(
+      name: 'Acapulco',
+      imagesUrl: [
+        'https://firebasestorage.googleapis.com/v0/b/visit-uz.appspot.com/o/t2.jpg?alt=media&token=8e775586-5cfd-42cc-b5e9-9d3ab73dbb8b'
+      ],
+      user: TravelUser.luna,
+    ),
   ];
 }
 
@@ -348,8 +442,8 @@ class TravelUser {
     'Alex Fernandez',
     'https://images.unsplash.com/photo-1589304038421-449708a42983?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
   );
-  static TravelUser mario = TravelUser(
-      'Mario Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
+  static TravelUser mario =
+      TravelUser('Mario Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
   static TravelUser luna = TravelUser(
     'Luna Benioly',
     'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
@@ -366,8 +460,8 @@ class TravelUser {
     'Rouse Fernandez',
     'https://images.unsplash.com/photo-1589304038421-449708a42983?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
   );
-  static TravelUser hemma = TravelUser(
-      'Hemma Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
+  static TravelUser hemma =
+      TravelUser('Hemma Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
   static TravelUser jenifer = TravelUser(
     'Jenifer Benioly',
     'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
@@ -384,11 +478,45 @@ class TravelUser {
     'Eric Fernandez',
     'https://images.unsplash.com/photo-1589304038421-449708a42983?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
   );
-  static TravelUser marko = TravelUser(
-      'Marko Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
+  static TravelUser marko =
+      TravelUser('Marko Calzada', 'https://i.ibb.co/c1j1VDT/yo.jpg');
 
-  static List<TravelUser> users = [alex, mario, luna, lili, javier,camila,
-    rouse, hemma, jenifer, sancho, alexa, eric, marko];
+  static List<TravelUser> users = [
+    alex,
+    mario,
+    luna,
+    lili,
+    javier,
+    camila,
+    rouse,
+    hemma,
+    jenifer,
+    sancho,
+    alexa,
+    eric,
+    marko
+  ];
 }
 
 enum StatusTag { popular, event }
+
+
+class TravelPlaces{
+  String? name;
+
+  TravelPlaces(this.name);
+
+  TravelPlaces.fromJson(Map<String,dynamic>json){
+    name=(json['name']as String);
+  }
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data =  <String, dynamic>{};
+    if (name != null) {
+      data['name'] = name;
+    }
+    data['name'] = name;
+
+    return data;
+  }
+
+}

@@ -1,13 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:map_launcher/map_launcher.dart';
 
 import '../../models/place.dart';
 import '../../view/feed/widgets/place_card.dart';
 import '../../view/feed/widgets/travel_navigation_bar.dart';
 import '../detail/faq_page.dart';
 import '../detail/place_detail_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'map_screen.dart';
+// import 'map_screen.dart';
+
+
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
@@ -25,11 +30,52 @@ class _FeedScreenState extends State<FeedScreen> {
   }
 
   final TextEditingController _searchQueryController = TextEditingController();
-  bool _isSearching = false;
-  String searchQuery = "Search query";
+
+  //bool _isSearching = false;
+  // String searchQuery = "Search query";
+  openMapsSheet(context) async {
+    try {
+      final coords = Coords(41.3165540, 69.2483000);
+      final title = "Toshkent";
+      final availableMaps = await MapLauncher.installedMaps;
+
+      showModalBottomSheet(
+        context: context,
+        builder: (BuildContext context) {
+          return SafeArea(
+            child: SingleChildScrollView(
+              child: Container(
+                child: Wrap(
+                  children: <Widget>[
+                    for (var map in availableMaps)
+                      ListTile(
+                        onTap: () => map.showMarker(
+                          coords: coords,
+                          title: title,
+                        ),
+                        title: Text(map.mapName),
+                        leading: SvgPicture.asset(
+                          map.icon,
+                          height: 30.0,
+                          width: 30.0,
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
+      );
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       appBar: AppBar(
         title: appBarTitle,
@@ -51,8 +97,12 @@ class _FeedScreenState extends State<FeedScreen> {
                         hintStyle: TextStyle(color: Colors.grey)),
                   );
                 } else {
-                  this.actionIcon = Icon(Icons.search,color: Color(0xff202053));
-                  this.appBarTitle = Text("Visit uz",style: TextStyle(color: Color(0xff202053)),);
+                  this.actionIcon =
+                      Icon(Icons.search, color: Color(0xff202053));
+                  this.appBarTitle = Text(
+                    "Visit uz",
+                    style: TextStyle(color: Color(0xff202053)),
+                  );
                   //this.leading = Icon(Icons.star_border);
                 }
               },
@@ -61,89 +111,54 @@ class _FeedScreenState extends State<FeedScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: ()    => Navigator.of(context).push(
-             MaterialPageRoute(builder: (context) => const FaqPage()),),
-            icon: Icon(CupertinoIcons.star,color: Color(0xff202053)),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const FaqPage()),
+            ),
+            icon: Icon(CupertinoIcons.star, color: Color(0xff202053)),
           ),
         ],
       ),
-      //     leading: _isSearching ? const BackButton() : Container(),
-      //     title: _isSearching ? _buildSearchField() : Text("Search"),
-      //     actions: _buildActions(),
-      //     title: const Text('Visit Uz'),
-      //     leading: IconButton(
-      //       onPressed: () {
-      //
-      //       },
-      //       icon: const Icon(CupertinoIcons.search),
-      //     ),
-      //     actions: [
-      //       IconButton(
-      //         onPressed: () {
-      //           icon: actionIcon,
-      //           onPressed:(){
-      //             setState((){
-      //               if(this.actionIcon.icon==Icons.search)
-      //                 {
-      //                   this.actionIcon=new Icon(Icons.close);
-      //                   this.appBarTitle=new TextField(
-      //                 style: TextStyle(
-      //                 color: Colors.white
-      //                 ),
-      //                 decoration: InputDecoration(prefixIcon: Icon(Icons.search,color: Colors.white,)),
-      //                 );
-      //                 }
-      // });
-      // },
-
-      //
-      // ),
-      //icon: const Icon(CupertinoIcons.star),
-      //),
-      // ],
-      //  ),
       body: RefreshIndicator(
         triggerMode: RefreshIndicatorTriggerMode.onEdge,
         onRefresh: _refresh,
         child: ListView.builder(
-            itemCount: TravelPlace.places.length,
-            itemExtent: 350,
-            physics: const BouncingScrollPhysics(),
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, kToolbarHeight + 20),
-            itemBuilder: (context, index) {
-              final place = TravelPlace.places[index];
-              return Hero(
-                tag: place.id,
-                child: PlaceCard(
-                  place: place,
-                  onPressed: () async {
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (_, animation, __) => FadeTransition(
-                          opacity: animation,
-                          child: PlaceDetailScreen(
-                            place: place,
-                            screenHeigh: MediaQuery.of(context).size.height,
-                          ),
-                        ),
+                  itemCount: TravelPlace.places.length,
+                  itemExtent: 350,
+                  physics: const BouncingScrollPhysics(),
+                  padding:
+                      const EdgeInsets.fromLTRB(20, 0, 20, kToolbarHeight + 20),
+                  itemBuilder: (context, index) {
+                    final place = TravelPlace.places[index];
+                    return Hero(
+                      tag: place.id,
+                      child: PlaceCard(
+                        place: place,
+                        onPressed: () async {
+                          Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                              pageBuilder: (_, animation, __) => FadeTransition(
+                                opacity: animation,
+                                child: PlaceDetailScreen(
+                                  place: place,
+                                  screenHeigh:
+                                      MediaQuery.of(context).size.height,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
                       ),
                     );
-                  },
-                ),
-              );
-            }),
+                  }),
+
       ),
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => NextScreen()),
-        ),
+        onPressed: () => openMapsSheet(context),
         child: const Icon(Icons.location_on),
       ),
-
       bottomNavigationBar: TravelNavigationBar(
         onTap: (index) {},
         items: [
@@ -157,74 +172,5 @@ class _FeedScreenState extends State<FeedScreen> {
         currentIndex: 1,
       ),
     );
-  }
-
-  Widget _buildSearchField() {
-    return TextField(
-      controller: _searchQueryController,
-      autofocus: true,
-      decoration: InputDecoration(
-        hintText: "Search Data...",
-        border: InputBorder.none,
-        hintStyle: TextStyle(color: Colors.white30),
-      ),
-      style: TextStyle(color: Colors.white, fontSize: 16.0),
-      onChanged: (query) => updateSearchQuery(query),
-    );
-  }
-
-  List<Widget> _buildActions() {
-    if (_isSearching) {
-      return <Widget>[
-        IconButton(
-          icon: const Icon(Icons.clear),
-          onPressed: () {
-            if (_searchQueryController == null ||
-                _searchQueryController.text.isEmpty) {
-              Navigator.pop(context);
-              return;
-            }
-            _clearSearchQuery();
-          },
-        ),
-      ];
-    }
-
-    return <Widget>[
-      IconButton(
-        icon: const Icon(Icons.search),
-        onPressed: _startSearch,
-      ),
-    ];
-  }
-
-  void _startSearch() {
-    ModalRoute.of(context)
-        ?.addLocalHistoryEntry(LocalHistoryEntry(onRemove: _stopSearching));
-
-    setState(() {
-      _isSearching = true;
-    });
-  }
-
-  void updateSearchQuery(String newQuery) {
-    setState(() {
-      searchQuery = newQuery;
-    });
-  }
-
-  void _stopSearching() {
-    _clearSearchQuery();
-
-    setState(() {
-      _isSearching = false;
-    });
-  }
-
-  void _clearSearchQuery() {
-    setState(() {
-      _searchQueryController.clear();
-      updateSearchQuery("");
-    });
   }
 }

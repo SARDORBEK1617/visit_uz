@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:visit_app/extensions/text_theme_x.dart';
 import 'package:visit_app/view/detail/widgets/place_comments_widget.dart';
@@ -77,6 +78,13 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final moviesRef = FirebaseFirestore.instance
+        .collection('firestore-example-app')
+        .withConverter<TravelPlaces>(
+          fromFirestore: (snapshots, _) =>
+              TravelPlaces.fromJson(snapshots.data()!),
+          toFirestore: (movie, _) => movie.toJson(),
+        );
     return Scaffold(
       body: Stack(
         children: [
@@ -107,7 +115,6 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           SizedBox(
                             height: 10,
                           ),
@@ -115,7 +122,6 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                           SizedBox(
                             height: 10,
                           ),
-
                         ],
                       ),
                     ),
@@ -144,11 +150,27 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                         }),
                   ),
                 ),
-                SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 150,
-                  ),
-                )
+                StreamBuilder<QuerySnapshot<TravelPlaces>>(
+                    stream: moviesRef.snapshots(),
+                    builder: (context, snapshot)
+                    {
+                      return ListView.builder(
+                          itemCount: snapshot.data?.size,
+                          itemExtent: 350,
+                          physics:  BouncingScrollPhysics(),
+                          padding:  EdgeInsets.fromLTRB(
+                              20, 0, 20, kToolbarHeight + 20),
+                          itemBuilder: (context, index) {
+                            final item = snapshot.data!.docs[index].data();
+
+                            return Text(item.toString());
+                          });
+                    }),
+                // SliverToBoxAdapter(
+                //   child: SizedBox(
+                //     height: 150,
+                //   ),
+                // )
               ],
             ),
           ),
@@ -162,15 +184,12 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
               );
             },
             child: const PlaceCommentsWidget(),
-            ),
-          
+          ),
         ],
       ),
     );
   }
 }
-
-
 
 class BuilderPersistentDelegate extends SliverPersistentHeaderDelegate {
   BuilderPersistentDelegate({
